@@ -20,11 +20,12 @@ int main()
 		switch(ch1)
 		{
 			case 1:
+				char entered_prod[30];
 				printf("\nEnter the name of the product:");
         			//char entered_prod; ---turn to string
 				scanf("%s", &entered_prod);
 				//if(entered_prod in s.prod_name array) ---syntax ---struct details
-					View_product();
+					View_product(entered_prod);
 				else
 				{
 					printf("\nProduct not found/not available");
