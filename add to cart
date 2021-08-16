@@ -1,0 +1,30 @@
+struct cart_products
+{
+	int ref_id;
+      char prod_name[20];
+      int qty;
+      float price;
+}cart;
+
+void add_to_cart()
+{
+	//in main?
+      int i = 0;
+      struct cart crt[50];
+      printf("\nEnter the name of product to add to cart:\n");
+      scanf("%s",&crt[i].prod_name);
+      
+      //code to search the product in csv file and match to ref id
+      //if product name in csv file
+      //add product name and details to array of structs - cart
+      //total bill append - total cost
+    
+      
+      
+      printf("\nEnter quantity of product:\n");
+      scanf("%d",crt[i].qty);
+      printf("\nProduct added to cart\n");
+      i++;
+      
+      //exit
+}
