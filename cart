@@ -1,0 +1,55 @@
+char items[][]
+
+
+totalcost+=(price of added item)
+
+if(choice==2) // delete from cart
+  {
+   int id;
+   printf("Enter id to delete item\n");
+   scanf("%d",&id);
+   //if(in range of stored ids){
+   totalCost=totalCost-(cost[id]*a[id]);
+   a[id]=0;   // a is array of structure - cart
+   }
+if(a[i]!=0)
+      {
+    printf("%d\t%s\t\t%d\t\t%d\n",i,items[i],a[i],(cost[i]*a[i]));
+      }
+      
+       printf("If you wish to buy anything more Enter\n1 to Add Item\n2 to Delete Items \n press 0 to Exit\n");
+     scanf("%d",&c);
+  }
+  
+ }while(c==1 || c==2);
+ printf("Your Final Cost is %d\n",totalCost);
+
+if(c==3)
+  {
+   int id,quantity;
+   printf("Enter id to Change quantity of an item\n");
+   scanf("%d",&id);
+   printf("Enter quantity to be changed of an item\n");
+   scanf("%d",&quantity);
+if()
+{
+      int dec=a[id]-quantity;
+      a[id]=quantity;
+       totalCost=totalCost-(cost[id]*dec); 
+     }
+     
+     
+     if(quantity>a[id]) 
+     {
+      int inc=quantity-a[id];
+      a[id]=quantity;
+       totalCost=totalCost+(cost[id]*inc); 
+     }
+     if(quantity==a[id]) 
+     {
+      a[id]=quantity;
+       totalCost=totalCost+0; 
+	   }   
+           
+    }
+
