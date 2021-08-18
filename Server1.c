@@ -19,9 +19,6 @@ void View_all()
             column = 0;
             row++;
 
-            // To avoid printing of column
-            // names in file can be changed
-            // according to need
             if (row == 1)
                 continue;
 
@@ -89,9 +86,6 @@ void View_product(char entered_prod[30])
             column = 0;
             row++;
 
-            // To avoid printing of column
-            // names in file can be changed
-            // according to need
             if (row == 1)
                 continue;
 
@@ -136,7 +130,6 @@ void View_product(char entered_prod[30])
                 column++;
 
             }
-            printf("\n");
             if(found==0)
                 break;
         }
@@ -166,9 +159,6 @@ void add_to_cart(char entered_prod[30])
             column = 0;
             row++;
 
-            // To avoid printing of column
-            // names in file can be changed
-            // according to need
             if (row == 1)
                 continue;
 
@@ -345,7 +335,6 @@ void edit_pdt(int slno, int added_quantity)
 		printf("\nCan't open file.");
 	else
 	{
-	    printf("\nCan open file.");
 		char buffer[300];
 		int com2, com3, numcom = 0;
         char buffer2[300], ch[5], ch2[5];
@@ -360,7 +349,6 @@ void edit_pdt(int slno, int added_quantity)
                 fprintf(fp2, "%s", buffer);
             else
             {
-                printf("HIHI");
                 strcpy(buffer2,buffer);
                 for(i =0;i<300;i++)
                 {
@@ -375,16 +363,12 @@ void edit_pdt(int slno, int added_quantity)
 
                     }
 
-                }
-                printf("\n %d, %d ", com2, com3);
+                };
                 for(i=0;i<(com3 - com2 - 1);i++)
                     ch2[i] = buffer[com2+1+i];
                 ch2[i] = '\0';
-                printf("\n%s", ch2);
-
                 itoa(added_quantity+atoi(ch2), ch, 10);
                 l = strlen(ch);
-                printf("\n%d", l);
                 for(i=1; i<=l;i++)
                     buffer[com2+i] = ch[i-1];
                 for(i=com2+l+1, j = com3; (i<300&&j<300); i++, j++)

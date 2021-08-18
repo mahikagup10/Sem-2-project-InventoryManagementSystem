@@ -1,9 +1,10 @@
     #include<stdio.h>
     #include<stdlib.h>
+    #include<conio.h>
     #include "inven_func.h"
     #include<string.h>
 
-    //int slots_used = -1;
+
 
     int main()
     {
@@ -25,12 +26,7 @@
                     printf("\nEnter the name of the product:");
                         //char pname; ---turn to string
                     scanf("%s", &pname);
-                    //if(pname in s.prod_name array) ---syntax ---struct details
-                        View_product(pname);
-                    /*else
-                    {
-                        printf("\nProduct not found/not available");
-                    }*/
+
                     break;
 
 
@@ -70,22 +66,43 @@
 
         else if(choice==2)
         {
-            printf("Enter employee login password:");
-            int emp_pass = 12345;    //change to string?
-                int entered_pass;
-                scanf("%d",&entered_pass);
-                if(entered_pass!=emp_pass)
+                char password[100], ch;
+                char correct_pass[] = "inventory";
+                int i = 0;
+                printf("Enter Password : ");
+                // 13 is ASCII value of Enter key
+                while((ch = getch()) != 13)
+                {
+                    if(i < 0)
+                        i = 0;
+                        // 8 is ASCII value of BACKSPACE character
+                    if(ch == 8)
+                    {
+                            putch('\b');
+                            putch(NULL);
+                            putch('\b');
+                            i--;
+                            continue;
+                    }
+                    password[i++] = ch;
+                    putch('*');
+                }
+                password[i] = '\0';
+
+                printf("\nEntered password is correct. ");
+                int check = strcmpi(password,correct_pass);
+                if(check!= 0)
                     printf("\nInvalid password\n");
                 else
                 {
                 int ch1, ch2, ref;
-                printf("What do you want to do? \n1.View inventory \n2.Add a product record \n3.Edit product details\n");
+                printf("\nWhat do you want to do? \n1.View inventory \n2.Add a product record \n3.Edit product details\n");
                       scanf("%d", &ch1);
                 do{
                 switch(ch1)
                 {
                     case 1:
-                        printf("\n1.Entire inventory \n2. A particular product"); //change
+                        printf("\n1.Entire inventory \n2. A particular product\n"); //change
                         scanf("%d", &ch2);
                         if(ch2 == 1)
                             View_all();
@@ -104,7 +121,7 @@
                     case 3:
                         printf("\nEnter id of the product: ");
                         scanf("%d", &pid);
-                        printf("\nEnter the quantity to be added (positive number) or removed (negative)");
+                        printf("\nEnter the quantity to be added (positive number) or removed (negative): ");
                         scanf("%d", &newQty);
                         edit_pdt(pid, newQty);
                         break;
@@ -116,7 +133,7 @@
             scanf("%d", &ch2);
             if(ch2!=0)
             {
-                printf("What do you want to do? \n1.View Products \n2.Add product to inventory \n3.Edit Product details");
+                printf("What do you want to do? \n1.View Products \n2.Add product to inventory \n3.Edit Product details\n");
                 scanf("%d", &ch1);
             }
             }while(ch2);
@@ -128,19 +145,6 @@
         printf("Invalid input");
             exit(0); 											// go back to choice
       }
-
-
-
-
-      /*
-
-      printf("\nDo you want to quit the program? (Press 0): ");
-        scanf("%d", &ch2);
-        }while(ch2);
-
-     */
-
-
 
 
       return 0;

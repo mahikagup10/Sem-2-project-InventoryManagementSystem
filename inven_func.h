@@ -11,8 +11,7 @@ void add_pdt();
 
 struct cart_products
 {
-	  //int ref_id;
-	  //int slots_used;
+
       char prod_name[20];
       int qty;
       int price;

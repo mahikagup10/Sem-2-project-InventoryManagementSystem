@@ -1,6 +1,9 @@
 Sl No,Name ,Quantity ,Price,Ppt 1,Ppt 2,Ppt3
-1,Cadbury,3,20,Dark ,Chocolate ,XYZ
-2,Galaxy,6,34,Smooth,Chocolate ,ret
-3,Reese,3,100,Peanut,Chocolate ,rty
-4,Gems,1,20,Small,Chocolate ,ree
-5,Mars,3,50,Caramel,Chocolate ,ryui
+1,Silk,43,100,Dark ,Chocolate ,Cadbury
+2,Galaxy,40,80,Smooth,Chocolate ,Mars
+3,BtrCups,23,50,Peanut,Chocolate ,Reese
+4,Gems,51,20,Small,Chocolate ,Cadbury
+5,Mars,63,50,Caramel,Chocolate ,Mars
+6,MilkyWay,70,60,Milk,Chocolate,Mars
+7,Fanta,20,35,600ml,Softdrink,CocaCola
+8,Pepsi,96,60,1000ml,Softdrink,PepsiCo
