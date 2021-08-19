@@ -24,8 +24,8 @@
                 case 1:
 
                     printf("\nEnter the name of the product:");
-                        //char pname; ---turn to string
                     scanf("%s", &pname);
+                    View_product(pname);
 
                     break;
 
@@ -89,12 +89,12 @@
                 }
                 password[i] = '\0';
 
-                printf("\nEntered password is correct. ");
                 int check = strcmpi(password,correct_pass);
                 if(check!= 0)
                     printf("\nInvalid password\n");
                 else
                 {
+                printf("\nEntered password is correct. ");
                 int ch1, ch2, ref;
                 printf("\nWhat do you want to do? \n1.View inventory \n2.Add a product record \n3.Edit product details\n");
                       scanf("%d", &ch1);
